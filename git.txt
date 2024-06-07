@@ -1,0 +1,90 @@
+
+1.
+#Factorial of a number
+echo "Enter the number"
+read number
+fact=1
+while [ $number -gt 1 ]
+do
+fact=$((fact*number))
+number=$((number-1))
+done
+echo $fact
+-------------------------------------
+2.
+#2.Fibbonacci of n numbers
+echo "Enter the number"
+read num
+a=0
+b=1
+echo "$a "
+echo "$b "
+for((i=2;i<num;i++))
+{
+    sum=$((a+b))
+    echo "$sum "
+    a=$b
+    b=$sum
+}
+-------------------------------------------------
+3.
+--------------------------------------------------
+4.
+#4.Sum of n numbers 
+echo "Enter the number"
+read num
+sum=0
+for((i=1;i<=num;i++))
+do
+    sum=$((sum+i))
+done
+echo $sum
+----------------------------------------------------
+5.
+#5.Greatest of 3 numbers 
+echo "Enter the number1"
+read num1
+echo "Enter the number2"
+read num2
+echo "Enter the number3"
+read num3
+
+if [ $num1 -ge $num2 ] && [ $num1 -ge $num3 ]
+then
+echo "$num1 is greatest"
+elif [ $num2 -ge $num1 ] && [ $num2 -ge $num3 ]
+then 
+echo "$num2 is greatest"
+else
+echo "$num3 is greatest"
+fi
+--------------------------------------------------
+6.
+--------------------------------------------------
+9.
+a)->
+
+read year
+if(($year%4==0 && $year%100!=0 || $year%400==0))
+then echo The year is leap year
+else
+echo The year is not leap year
+fi
+
+b)->
+read num
+if(( $num==0 ))
+then echo The is neither positive nor negative
+elif(( $num>=0 ))
+then echo The num is positive
+else
+echo The num is negative
+fi
+------------------------------------------------
+10.
+read num
+elif(( $num%2==0 ))
+then echo The num is even
+else
+echo The num is odd
+fi
